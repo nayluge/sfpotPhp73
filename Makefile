@@ -1,3 +1,11 @@
+install:
+ifeq ($(shell uname -s),Linux)
+	sudo apt-get install python-pygments
+endif
+ifeq ($(shell uname -s), Darwin)
+	sudo easy_install Pygments
+endif
+
 all:
 	export TERM=xterm
 	make intro --silent
