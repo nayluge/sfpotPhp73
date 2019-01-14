@@ -8,6 +8,7 @@ endif
 
 all:
 	export TERM=xterm
+	clear
 	make intro --silent
 	SCRIPT="./scripts/trailingComma.php" make runall --silent
 	SCRIPT="./scripts/list.php" make runall --silent
